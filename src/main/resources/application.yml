@@ -1,0 +1,36 @@
+
+
+server: #연결 포트 선언
+  port: 1111
+
+spring: #db연결, 레디스 연결 정보
+  datasource:
+    url: url
+    username: name
+    password: pw
+  jpa:
+    hibernate:
+      ddl-auto: none   # 개발용: 자동 스키마 업데이트
+    show-sql: true
+  data:
+    redis:
+      host: localhost
+      port: 1111
+      password: pw
+logging:
+  level:
+    org.springframework.data.redis: DEBUG
+    io.lettuce.core: DEBUG
+
+#jwt 정보
+jwt:
+  secret: key
+  access-token-validity: 3600000       # 1시간 (밀리초)
+  refresh-token-validity: 1209600000   # 14일
+
+#스웨거 주소
+springdoc:
+  api-docs:
+    path: path
+  swagger-ui:
+    path: path            # UI를 /docs로 노출
