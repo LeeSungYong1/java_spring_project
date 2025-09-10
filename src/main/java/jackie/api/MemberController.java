@@ -43,6 +43,9 @@ public class MemberController {
         member.setName(request.getName());
         member.setNickName(request.getNick_name());
         member.setSex(request.getSex());
+        member.setPhone(request.getPhone());
+        member.setDeviceCode(request.getDevice_code());
+        member.setMemberStatus(request.getMember_status());
 
         // created_at은 서버 기준 현재 시간 저장
         member.setCreatedAt(LocalDateTime.now());
@@ -66,6 +69,9 @@ public class MemberController {
         member.setName(request.getName());
         member.setNickName(request.getNick_name());
         member.setSex(request.getSex());
+        member.setPhone(request.getPhone());
+        member.setDeviceCode(request.getDevice_code());
+        member.setMemberStatus(request.getMember_status());
         member.setUpdatedAt(LocalDateTime.now()); // 수정 시각 갱신
 
         // 3. 저장

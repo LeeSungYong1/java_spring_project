@@ -11,6 +11,34 @@ public class MemberCreateRequest {
     private String name;
     private String nick_name;
     private String sex;
+    private String phone;
+    private String device_code;
+    private String member_status;
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getDevice_code() {
+        return device_code;
+    }
+
+    public void setDevice_code(String device_code) {
+        this.device_code = device_code;
+    }
+
+    public String getMember_status() {
+        return member_status;
+    }
+
+    public void setMember_status(String member_status) {
+        this.member_status = member_status;
+    }
+
     private LocalDateTime created_at;
     private LocalDateTime updated_at;
 

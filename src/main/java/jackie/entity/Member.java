@@ -27,6 +27,39 @@ public class Member {
     @Column(name = "sex", nullable = true, length = 1)
     private String sex;
 
+    @Column(name="phone", nullable = true)
+    private String phone;
+
+    @Column(name="device_code")
+    private String deviceCode;
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getDeviceCode() {
+        return deviceCode;
+    }
+
+    public void setDeviceCode(String deviceCode) {
+        this.deviceCode = deviceCode;
+    }
+
+    public String getMemberStatus() {
+        return memberStatus;
+    }
+
+    public void setMemberStatus(String memberStatus) {
+        this.memberStatus = memberStatus;
+    }
+
+    @Column(name="member_status")
+    private String memberStatus;
+
     //등록 시간
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
