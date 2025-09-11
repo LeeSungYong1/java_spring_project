@@ -1,13 +1,9 @@
 package jackie.dto;
-import jakarta.validation.constraints.NotBlank;
+
 import java.time.LocalDateTime;
 
-/**
- * 회원 저장 시, dto 클래스
- */
-public class MemberCreateRequest {
-    @NotBlank(message = "msg는 비어 있을 수 없습니다.")
-
+public class MemberLogCreateRequest {
+    private Integer member_id;
     private String name;
     private String nick_name;
     private String sex;
@@ -16,6 +12,38 @@ public class MemberCreateRequest {
     private String member_status;
     private LocalDateTime created_at;
     private LocalDateTime updated_at;
+
+    public Integer getMember_id() {
+        return member_id;
+    }
+
+    public void setMember_id(Integer member_id) {
+        this.member_id = member_id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getNick_name() {
+        return nick_name;
+    }
+
+    public void setNick_name(String nick_name) {
+        this.nick_name = nick_name;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
 
     public String getPhone() {
         return phone;
@@ -41,51 +69,19 @@ public class MemberCreateRequest {
         this.member_status = member_status;
     }
 
-    public String getName() {
-
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getNick_name() {
-        return nick_name;
-    }
-
-    public void setNick_name(String nick_name) {
-
-        this.nick_name = nick_name;
-    }
-
-    public String getSex() {
-
-        return sex;
-    }
-
-    public void setSex(String sex) {
-
-        this.sex = sex;
-    }
-
     public LocalDateTime getCreated_at() {
-
         return created_at;
     }
 
     public void setCreated_at(LocalDateTime created_at) {
-
         this.created_at = created_at;
     }
 
     public LocalDateTime getUpdated_at() {
-
         return updated_at;
     }
 
     public void setUpdated_at(LocalDateTime updated_at) {
-
         this.updated_at = updated_at;
     }
 }
